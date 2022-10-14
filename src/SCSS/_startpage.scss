@@ -1,0 +1,26 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+body {
+
+    header {
+        position: relative;   
+    
+        /*@include m.desktop {
+            skriv styling
+        }*/
+
+        nav {
+            ul {
+                list-style: none;
+            }
+
+        }
+    }
+
+    .main {
+        .image_container {
+            position: absolute;
+        }
+    }
+}
