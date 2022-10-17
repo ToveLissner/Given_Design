@@ -14,7 +14,14 @@ body {
             skriv styling
         }*/
 
+        .span {
+            display: flex;
+            flex-direction: column;
 
+            span {
+                @include m.span;
+            }
+        }
 
         nav {
             ul {
