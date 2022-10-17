@@ -2,25 +2,44 @@
 @use "mixins" as m;
 
 body {
+    display: flex;
+    margin: 0 auto;
 
     header {
-        position: relative;   
+        position: absolute;  
+        top: 20px;
+        right: 50px;  
     
         /*@include m.desktop {
             skriv styling
         }*/
 
+        .icon1{
+            color: white;
+            font-size:xx-large;
+        }
+
         nav {
             ul {
                 list-style: none;
+                a {
+                    color: white;
+                }
             }
-
         }
     }
 
-    .main {
-        .image_container {
-            position: absolute;
-        }
+    main {
+            .image__container {
+                background-image: url("../assets/negative-space-black-forest-dawn.jpg");
+                height: 100vh;
+                color: white;
+                display: flex;
+                text-align: center;
+                flex-direction: column;    
+                justify-content: center;
+            }
     }
+
+    
 }

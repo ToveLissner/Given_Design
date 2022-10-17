@@ -1,0 +1,29 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+h2 {
+    text-align: center;
+}
+
+.profile {
+
+    &__name {
+        color: black;
+        text-align: center;
+    }
+
+    &__imagecontainer {
+        size: 0ch;
+
+        &__image {
+            size: 0ch;
+        }
+    }
+
+    &__about {
+        color: black;
+        text-align: center;
+    }
+
+}

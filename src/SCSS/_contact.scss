@@ -1,0 +1,13 @@
+@use "variables" as v;
+
+.contact {
+    background-color: black;
+    height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;    ;
+    justify-content: center;
+    padding: 100px;
+    gap: 50px;
+    font-size: larger;
+}
