@@ -1,24 +1,41 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-h2 {
-    text-align: center;
-}
+#about {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-.profile {
-    &__rakib {
-        @include m.profile(url("../assets/profiles/Rakib_Square.png"));
+    h2 {
+        text-align: center;
     }
 
-    &__alexandra {
-        @include m.profile(url("../assets/profiles/Alexandra_Square.png"));
-    }   
+    .profile {
 
-    &__lasse {
-        @include m.profile;
+        &__rakib {
+            @include m.profile(url("../assets/profiles/Rakib_Square.png"));
+        }
+
+        &__alexandra {
+            @include m.profile(url("../assets/profiles/Alexandra_Square.png"));
+        }   
+
+        &__lasse {
+            @include m.profile;
+        }  
+
+        &__sebastian {
+            @include m.profile(url("../assets/profiles/Sebastian_Square.png"));
+        }
     }  
 
-    &__sebastian {
-        @include m.profile(url("../assets/profiles/Sebastian_Square.png"));
+    .arrowdown {
+        @include m.arrowdown;
     }
-}  
+    
+    .arrowdown__black {
+        @include m.arrowdown (black);
+    }
+
+}

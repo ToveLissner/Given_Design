@@ -6,13 +6,16 @@
     }     
 }
 
-@mixin arrowdown {
-    color: white;
-    font-size: x-large;
+@mixin arrowdown ($color: white) {
+    color: $color;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
 }
 
 @mixin profile($background-image: url("../assets/profiles/NoPerson_Square.png")){
     .profile {
+
         &__name {
             color: black;
             text-align: center;
@@ -34,8 +37,16 @@
         }
 
         &__about {
+            background-color: lightgrey;
+            width: 230px;
             color: black;
-            text-align: center;
+            text-align: left;
+            padding: 40px;
+
+            i {
+                color: black;
+                font-size: xx-large;
+            }
         }
     }
 }

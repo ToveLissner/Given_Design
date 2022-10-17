@@ -3,3 +3,7 @@
 .arrowdown {
     @include m.arrowdown;
 }
+
+.arrowdown__black {
+    @include m.arrowdown (black);
+}
