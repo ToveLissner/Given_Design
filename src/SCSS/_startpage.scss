@@ -16,7 +16,7 @@ body {
 
         .icon1{
             color: white;
-            font-size:xx-large;
+            font-size: xx-large;
         }
 
         nav {
@@ -32,6 +32,8 @@ body {
     main {
             .image__container {
                 background-image: url("../assets/negative-space-black-forest-dawn.jpg");
+                background-position: center;
+                background-size: cover;
                 height: 100vh;
                 color: white;
                 display: flex;

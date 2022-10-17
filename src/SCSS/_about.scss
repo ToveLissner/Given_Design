@@ -1,29 +1,24 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-
 h2 {
     text-align: center;
 }
 
 .profile {
-
-    &__name {
-        color: black;
-        text-align: center;
+    &__rakib {
+        @include m.profile(url("../assets/profiles/Rakib_Square.png"));
     }
 
-    &__imagecontainer {
-        size: 0ch;
+    &__alexandra {
+        @include m.profile(url("../assets/profiles/Alexandra_Square.png"));
+    }   
 
-        &__image {
-            size: 0ch;
-        }
+    &__lasse {
+        @include m.profile;
+    }  
+
+    &__sebastian {
+        @include m.profile(url("../assets/profiles/Sebastian_Square.png"));
     }
-
-    &__about {
-        color: black;
-        text-align: center;
-    }
-
-}
+}  

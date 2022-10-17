@@ -6,6 +6,36 @@
     }     
 }
 
-@mixin profile {
+@mixin arrowdown {
+    color: white;
+    font-size: x-large;
+}
 
+@mixin profile($background-image: url("../assets/profiles/NoPerson_Square.png")){
+    .profile {
+        &__name {
+            color: black;
+            text-align: center;
+        }
+
+        &__imagecontainer {
+            display: flex;
+            justify-content: center;
+
+            &__image {
+                background-image: $background-image;
+                background-position: center; 
+                background-size: contain;
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                box-shadow: 0 0 1rem 1rem lightgrey;
+            }
+        }
+
+        &__about {
+            color: black;
+            text-align: center;
+        }
+    }
 }
