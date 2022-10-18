@@ -12,20 +12,12 @@ align-items: center;
     flex-wrap: wrap;
     padding: 100px;
     gap: 50px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
     h2 {
         text-align: center;
         width: 100%;
-    }
-
-    @include m.desktop {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 100px;
-        gap: 50px;
-        justify-content: space-between;
     }
 
     .profile {

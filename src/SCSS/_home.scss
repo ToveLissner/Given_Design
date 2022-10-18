@@ -6,7 +6,7 @@ body {
     margin: 0 auto;
 
     /* @include m.desktop {
-        margin: 10px;
+        skriv styling här 
     } */
 
     header {
@@ -55,12 +55,21 @@ body {
 
                 h1 {
                     font-size: xx-large;
+
+                    @include m.desktop {
+                        font-size: x-large;
+                    }
                 }
 
                 p {
                     font-size: xx-large;
                     padding-right: 40px;
                     padding-left: 40px;
+
+                    @include m.desktop {
+                        font-size: x-large;
+                    }
+
                 }
 
                 .arrowdown {

@@ -21,7 +21,6 @@
 @mixin arrowdown ($color: white) {
     color: $color;
     font-size: xx-large;
-    padding: 40px;
 
     @include desktop {
         width: 100%;
