@@ -7,8 +7,25 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 
+@include m.desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px;
+    gap: 50px;
+    justify-content: space-between;
+}
+
     h2 {
         text-align: center;
+        width: 100%;
+    }
+
+    @include m.desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 100px;
+        gap: 50px;
+        justify-content: space-between;
     }
 
     .profile {
@@ -27,11 +44,6 @@ align-items: center;
 
         &__sebastian {
             @include m.profile(url("../assets/profiles/Sebastian_Square.png"));
-        }
-
-        @include m.desktop {
-            flex-direction: row;
-            color: green;
         }
 
     }  

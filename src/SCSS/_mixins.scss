@@ -22,6 +22,11 @@
     color: $color;
     font-size: xx-large;
     padding: 40px;
+
+    @include desktop {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 //Profilerna//
@@ -56,6 +61,11 @@
             text-align: left;
             padding: 40px;
             border-radius: 5px;
+
+            @include desktop {
+                width: 400px;
+                height: 50px;
+            }
 
             i {
                 color: black;
