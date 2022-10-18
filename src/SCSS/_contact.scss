@@ -7,8 +7,21 @@
     display: flex;
     flex-direction: column;    ;
     justify-content: center;
-    padding: 100px;
-    gap: 50px;
-    font-size: larger;
+    padding: 140px;
+    gap: 20px;
+    font-size: xx-large;
 
+    &__socialmedia {
+
+        &__title{
+
+            &__link{
+                color: white;
+
+                i {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
 }
