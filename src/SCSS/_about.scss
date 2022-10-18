@@ -28,6 +28,12 @@ align-items: center;
         &__sebastian {
             @include m.profile(url("../assets/profiles/Sebastian_Square.png"));
         }
+
+        @include m.desktop {
+            flex-direction: row;
+            color: green;
+        }
+
     }  
 
     .arrowdown__black {

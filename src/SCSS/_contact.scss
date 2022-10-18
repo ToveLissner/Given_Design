@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 .contact {
     background-color: black;
@@ -11,13 +12,26 @@
     gap: 20px;
     font-size: xx-large;
 
+    @include m.desktop {
+        flex-direction: row;
+        height: 100px;
+        padding: 50px;
+        gap: 5px;
+        font-size: medium;
+        justify-content: space-around;
+    }
+
     &__socialmedia {
 
         &__title{
-            
+
             &__link{
                 color: white;
                 padding-right: 20px;
+
+                @include m.desktop {
+                    padding-right: 10px;
+                }
             }
         }
     }

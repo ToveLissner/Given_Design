@@ -5,14 +5,18 @@ body {
     display: flex;
     margin: 0 auto;
 
+    /* @include m.desktop {
+        margin: 10px;
+    } */
+
     header {
         position: absolute;  
         top: 20px;
         right: 50px;  
     
-        /*@include m.desktop {
-            skriv styling
-        }*/
+        /* @include m.desktop {
+            skriv styling här
+        } */
 
         .menu {
             display: flex;
@@ -44,6 +48,10 @@ body {
                 text-align: center;
                 flex-direction: column;    
                 justify-content: center;
+
+                @include m.desktop {
+                    width: 100vw;
+                }
 
                 h1 {
                     font-size: xx-large;
