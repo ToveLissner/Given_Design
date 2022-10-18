@@ -6,6 +6,8 @@
     }     
 }
 
+//Förstasidan//
+
 @mixin span {
     background-color: white;
     width: 40px;
@@ -14,12 +16,15 @@
     margin-right: 5px;
 }
 
+//Ikoner//
+
 @mixin arrowdown ($color: white) {
     color: $color;
     font-size: xx-large;
-    display: flex;
-    justify-content: center;
+    padding: 40px;
 }
+
+//Profilerna//
 
 @mixin profile($background-image: url("../assets/profiles/NoPerson_Square.png")){
     .profile {

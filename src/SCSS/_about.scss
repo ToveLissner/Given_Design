@@ -30,4 +30,8 @@ align-items: center;
         }
     }  
 
+    .arrowdown__black {
+        @include m.arrowdown (black);
+    }
+
 }
