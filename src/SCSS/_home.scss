@@ -20,8 +20,12 @@ body {
 
         .menu {
             position: relative;
-            top: 15px; 
             height: 30px;
+            margin-right: 5px;
+
+            @include m.desktop {
+                margin-right: 20px;
+            }
 
             &__line__1 {  
                 top: 0px;
@@ -56,16 +60,16 @@ body {
         
         nav {
             ul {
-                list-style: none;
-                width: 100vw;
 
                 @include m.desktop {
                     display: flex;
                     flex-direction: row;
                     gap: 20px;
-                    margin-right: 20px;
+                    justify-content: right;
                 }
 
+                list-style: none;
+                width: 100vw;
                 a {
                     color: white;
                     text-decoration: none;
