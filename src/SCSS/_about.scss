@@ -7,13 +7,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 
-@include m.desktop {
+    @include m.desktop {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 100px;
     gap: 50px;
-    justify-content: space-around;
-}
+    justify-content: space-a;
+    }
 
     h2 {
         text-align: center;
@@ -37,7 +37,6 @@ align-items: center;
         &__sebastian {
             @include m.profile(url("../assets/profiles/Sebastian_Square.png"));
         }
-
     }  
 
     .arrowdown__black {

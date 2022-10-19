@@ -19,19 +19,55 @@ body {
         } */
 
         .menu {
-            display: flex;
-            flex-direction: column;
+            position: relative;
+            height: 30px;
 
-            &__line {
+            &__line__1 {  
+                top: 0px;
+                @include m.span;
+            }
+
+            &__line__2 { 
+                top: 50%;
+                transform: translateY(-50%); 
+                @include m.span;
+            }
+
+            &__line__3 { 
+                bottom: 0; 
                 @include m.span;
             }
         }
+
+        .menu:hover {
+            .menu__line__1 {
+                top: 13px;
+                transform: rotate(135deg); 
+            }
+            .menu__line__2 {
+                opacity: 0;
+            }    
+            .menu__line__3 {
+                bottom: 13px;
+                transform: rotate(-135deg); 
+            }
+        }
+        
 
         nav {
             ul {
                 list-style: none;
                 a {
-                    color: white;
+                    color: white(0,0,0,0);
+                }
+            }
+        }
+
+        nav:hover {
+            ul {
+                list-style: none;
+                a {
+                    color: green;
                 }
             }
         }
