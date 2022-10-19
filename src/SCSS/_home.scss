@@ -11,8 +11,8 @@ body {
 
     header {
         position: absolute;  
-        top: 20px;
-        right: 50px;  
+        top: 15px;
+        right: 5px;  
     
         /* @include m.desktop {
             skriv styling här
@@ -53,21 +53,21 @@ body {
             }
         }
         
-
         nav {
             ul {
                 list-style: none;
                 a {
-                    color: white(0,0,0,0);
+                    color: white;
+                    text-decoration: none;
+                    // opacity: 0;
                 }
             }
         }
 
         nav:hover {
             ul {
-                list-style: none;
                 a {
-                    color: green;
+                    opacity: 1;
                 }
             }
         }
