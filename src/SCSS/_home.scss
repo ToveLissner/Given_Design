@@ -12,46 +12,45 @@ body {
     header {
         position: absolute;   
     
-        /* @include m.desktop {
+            /* @include m.desktop {
             skriv styling här
-        background-color: white;
-        opacity: 0.1;
-        } */
+            background-color: white;
+            opacity: 0.1;
+            } */
 
         nav {
             position: absolute;
 
             .menu {
-                position: absolute; 
+                position: absolute;
 
                 //-webkit-user-select: none;
                 //user-select: none;
 
-                &__checkbox {
-                    width: 40px;
-                    height: 32px;
-                    position: absolute;
-                    //top: -7px;
-                    //right: -5px;
-                    
-                    cursor: pointer;
-                    
-                    //opacity: 0;
-                    z-index: 2; 
-                    
-                    //-webkit-touch-callout: none;
-                }
-
                 &__hamburger {
                     position: relative;
                     height: 30px;
-                    margin-right: 5px;
-                    margin-top: 10px;
+                    
 
                     z-index: 1;
 
                     @include m.desktop {
                     margin-right: 20px;
+                    }
+
+                    &__checkbox {
+                        width: 40px;
+                        height: 32px;
+                        position: absolute;
+                        top: -6px;
+                        right: 48px;
+                        
+                        cursor: pointer;
+                        
+                        //opacity: 0;
+                        z-index: 2; 
+                        
+                        //-webkit-touch-callout: none;
                     }
 
                     &__line__1 {  
@@ -69,49 +68,57 @@ body {
                         bottom: 0; 
                         @include m.span;
                     }
-                }
 
-                .menu__hamburger:hover {
-                    .menu__hamburger__line__1 {
-                        top: 13px;
-                        transform: rotate(135deg); 
-                    }
-                    .menu__hamburger__line__2 {
-                        opacity: 0;
-                    }    
-                    .menu__hamburger__line__3 {
-                        bottom: 13px;
-                        transform: rotate(-135deg); 
-                    }
-                }
-            
-                &__list {
-                    text-align: center;
-                    padding: 20px;
-                    font-size: large;
-                    list-style: none;
-                    width: 100vw;
-
-                    @include m.desktop {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 20px;
-                        justify-content: right;
-                    }
-
-                    a {
-                        color: white;
-                        text-decoration: none;
-                        // opacity: 0;
+                    &__list {
+                        text-align: center;
+                        align-items: center;
+                        font-size: large;
+                        list-style: none;
+                        width: 100vw;
+                        padding: 0px;
+        
+                        @include m.desktop {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 20px;
+                            justify-content: right;
+                        }
+        
+                        &__link {
+                            top: 100px;
+                            color: white;
+                            top: 100px;
+                            font-size: x-large;
+                            text-decoration: none;
+                            opacity: 1;
+                        }    
                     }
                 }
-
-                //.menu__checkbox:checked ~ ul {
-                  //  transform: none; 
-                //}
-            }
-        }
+            }     
+        }        
     }
+
+    .menu__hamburger:hover{
+        .menu__hamburger__line__1 {
+            top: 13px;
+            transform: rotate(135deg); 
+        }
+        .menu__hamburger__line__2 {
+            opacity: 0;
+        }    
+        .menu__hamburger__line__3 {
+            bottom: 13px;
+            transform: rotate(-135deg); 
+        }
+
+        .menu__hamburger__list {
+            background-color: rgba(255, 255, 255, 0.141);
+        }   
+
+        .menu__hamburger__list__link {
+            opacity: 1;
+        }    
+    } 
 
     main {
             .image__container {
@@ -149,14 +156,15 @@ body {
 
                 }
             }
+
             .arrowdown {
                 @include m.arrowdown;
-                margin-top: 200px;
+                margin-top: 250px;
 
                 @include m.desktop {
-                    margin-top: 250px;
+                    margin-top: 350px;
                 }
                 
-            }
-        }
+           }
+    }
 }
