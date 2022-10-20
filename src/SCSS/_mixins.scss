@@ -6,7 +6,7 @@
     }     
 }
 
-//Förstasidan//
+//Header//
 
 @mixin span {
     position: absolute;
@@ -14,8 +14,6 @@
     background-color: white;
     width: 40px;
     height: 4px;
-
-    z-index: 1;
 }
 
 //Ikoner//
