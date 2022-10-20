@@ -18,74 +18,94 @@ body {
         opacity: 0.1;
         } */
 
-        .menu {
-            position: relative;
-            height: 30px;
-            margin-right: 5px;
-
-            @include m.desktop {
-                margin-right: 20px;
-            }
-
-            &__line__1 {  
-                top: 0px;
-                @include m.span;
-            }
-
-            &__line__2 { 
-                top: 50%;
-                transform: translateY(-50%); 
-                @include m.span;
-            }
-
-            &__line__3 { 
-                bottom: 0; 
-                @include m.span;
-            }
-        }
-
-        .menu:hover {
-            .menu__line__1 {
-                top: 13px;
-                transform: rotate(135deg); 
-            }
-            .menu__line__2 {
-                opacity: 0;
-            }    
-            .menu__line__3 {
-                bottom: 13px;
-                transform: rotate(-135deg); 
-            }
-        }
-        
         nav {
-            ul {
-                text-align: center;
-                padding: 20px;
-                font-size: large;
-               
+            position: absolute;
 
-                @include m.desktop {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 20px;
-                    justify-content: right;
+            .menu {
+                position: absolute; 
+
+                //-webkit-user-select: none;
+                //user-select: none;
+
+                &__checkbox {
+                    width: 40px;
+                    height: 32px;
+                    position: absolute;
+                    top: -7px;
+                    right: -5px;
+                    
+                    cursor: pointer;
+                    
+                    //opacity: 0;
+                    z-index: 2; 
+                    
+                    //-webkit-touch-callout: none;
                 }
 
-                list-style: none;
-                width: 100vw;
-                a {
-                    color: white;
-                    text-decoration: none;
-                    // opacity: 0;
-                }
-            }
-        }
+                &__hamburger {
+                    position: relative;
+                    height: 30px;
+                    margin-right: 5px;
+                    margin-top: 10px;
 
-        nav:hover {
-            ul {
-                a {
-                    opacity: 1;
+                    @include m.desktop {
+                        margin-right: 20px;
+                    }
+
+                    &__line__1 {  
+                        top: 0px;
+                    @include m.span;
+                    }
+
+                    &__line__2 { 
+                        top: 50%;
+                        transform: translateY(-50%); 
+                        @include m.span;
+                    }
+
+                    &__line__3 { 
+                        bottom: 0; 
+                        @include m.span;
+                    }
+                }
+
+                .menu__checkbox:checked ~ span {
+                    &__line__1 {
+                        top: 13px;
+                        transform: rotate(135deg); 
+                    }
+                    &__line__2 {
+                        opacity: 0;
+                    }    
+                    &__line__3 {
+                        bottom: 13px;
+                        transform: rotate(-135deg); 
+                    }
+                }
+            
+                &__list {
+                    text-align: center;
+                    padding: 20px;
+                    font-size: large;
+                    list-style: none;
+                    width: 100vw;
+
+                    @include m.desktop {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        justify-content: right;
+                    }
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        // opacity: 0;
+                    }
+                }
+
+                .menu__checkbox:checked ~ ul {
+                    transform: none; 
                 }
             }
         }
