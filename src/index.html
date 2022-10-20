@@ -9,33 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="SCSS/main.scss" rel="stylesheet">
-    
+
 </head>
 <body>
 
     <header>
         <nav role="navigation">
-            <section class="menu">
-                    <div class="menu__hamburger">
-                        <input type="checkbox" class="menu__hamburger__checkbox" id="checkbox" />
-                        <span class="menu__hamburger__line__1">  </span>
-                        <span class="menu__hamburger__line__2">  </span>
-                        <span class="menu__hamburger__line__3">  </span>
-                        <ul class="menu__hamburger__list">
-                            <li> 
-                            <a class="menu__hamburger__list__link" href="#home">Hem</a>
-                            </li>
-                            <li> 
-                                <a class="menu__hamburger__list__link" href="#about">Om</a>
-                            </li>
-                            <li> 
-                                <a class="menu__hamburger__list__link" href="#contact">Kontakt</a>
-                            </li>
-                        </ul>
-                </div>
-            </section>
+          <div class="menu">
+            <input
+              type="checkbox"
+              class="menu__checkbox"
+              id="checkbox"
+            />
+            <div class="menu__hamburger">
+              <span class="menu__hamburger__line"></span>
+              <span class="menu__hamburger__line"></span>
+              <span class="menu__hamburger__line"></span>
+            </div>
+            <ul class="menu__list">
+              <li>
+                <a class="menu__list__link" href="#home">Hem</a>
+              </li>
+              <li>
+                <a class="menu__list__link" href="#about">Om</a>
+              </li>
+              <li>
+                <a class="menu__list__link" href="#contact">Kontakt</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-    </header>
+      </header>
 
     <main> 
         <section id="home" class="image__container">

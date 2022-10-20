@@ -1,123 +1,119 @@
 @use "variables" as v;
 @use "mixins" as m;
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     display: flex;
     margin: 0 auto;
 
-    /* @include m.desktop {
-        skriv styling här 
-    } */
-
     header {
-        position: absolute;   
+        position: absolute;
+        width: 100%;
     
-            /* @include m.desktop {
-            skriv styling här
-            background-color: white;
-            opacity: 0.1;
-            } */
-
         nav {
-            position: absolute;
+          .menu {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.15);
+            width: 100%;
+            height: 60px;
+    
+            &__hamburger {
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              pointer-events: none;
 
-            .menu {
-                position: absolute;
+                @include m.desktop {
+                display: none;
+                }
+            }
+    
+            &__checkbox {
+              position: absolute;
+              right: 24px;
+              top: 15px;
+    
+              display: block;
+              width: 40px;
+              height: 32px;
+    
+              cursor: pointer;
+    
+              opacity: 0;
+    
+              &:checked ~ ul {
+                display: flex;
+              }
+    
+              &:checked ~ .menu__hamburger span {
+                transform: rotate(-45deg);
+              }
+    
+              &:checked ~ .menu__hamburger span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+              }
+    
+              &:checked ~ .menu__hamburger span:nth-last-child(2) {
+                transform: rotate(45deg) translate(1px, -3px);
+              }
 
-                //-webkit-user-select: none;
-                //user-select: none;
+                @include m.desktop {
+                display: none;
+                }
+            
+            }
+            &__hamburger__line {
+                @include m.span; 
+            }
+    
+            &__list {
+              padding: 0;
+              padding-bottom: 10px;
+              margin: 0;
+              margin-top: 60px;
+              background-color: rgba(255, 255, 255, 0.15);
+              top: 0;
+              position: absolute;
+              width: 100%;
+              z-index: 1;
+    
+              display: none;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              gap: 10px;
+              list-style: none;
+    
+              &__link {
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+              }
 
-                &__hamburger {
-                    position: relative;
-                    height: 30px;
-
-                    // z-index: 1; 
-
+                li:nth-child(3){
                     @include m.desktop {
-                    margin-right: 20px;
-                    }
-
-                    &__checkbox {
-                        width: 40px;
-                        height: 32px;
-                        position: absolute;
-                        top: -6px;
-                        right: 48px;
-                        
-                        cursor: pointer;
-                        
-                        //opacity: 0;
-                        // z-index: 2; 
-                        
-                        //-webkit-touch-callout: none;
-                    }
-
-                    &__line__1 {  
-                        top: 0px;
-                        @include m.span;
-                    }
-
-                    &__line__2 { 
-                        top: 50%;
-                        transform: translateY(-50%); 
-                        @include m.span;
-                    }
-
-                    &__line__3 { 
-                        bottom: 0; 
-                        @include m.span;
-                    }
-
-                    &__list {
-                        text-align: center;
-                        align-items: center;
-                        font-size: large;
-                        list-style: none;
-                        width: 100vw;
-                        padding: 0px;
-        
-                        @include m.desktop {
-                            display: flex;
-                            flex-direction: row;
-                            gap: 20px;
-                            justify-content: right;
-                        }
-        
-                        &__link {
-                            top: 100px;
-                            color: white;
-                            top: 100px;
-                            font-size: x-large;
-                            text-decoration: none;
-                            opacity: 1;
-                        }    
+                        margin-right: 30px;
                     }
                 }
-            }     
-        }        
-    }
 
-    .menu__hamburger:hover{
-        .menu__hamburger__line__1 {
-            top: 13px;
-            transform: rotate(135deg); 
+              @include m.desktop {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0px;
+                height: 60px;
+                background-color: transparent;
+                justify-content: flex-end;
+                gap: 35px;
+                }
+
+            }
+          }
         }
-        .menu__hamburger__line__2 {
-            opacity: 0;
-        }    
-        .menu__hamburger__line__3 {
-            bottom: 13px;
-            transform: rotate(-135deg); 
-        }
-
-        .menu__hamburger__list {
-            background-color: rgba(255, 255, 255, 0.141);
-        }   
-
-        .menu__hamburger__list__link {
-            opacity: 1;
-        }    
-    } 
+      }           
 
     main {
             .image__container {
