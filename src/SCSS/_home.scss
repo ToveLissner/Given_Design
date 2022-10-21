@@ -100,14 +100,14 @@ body {
                     }
                 }
 
-              @include m.desktop {
-                display: flex;
-                flex-direction: row;
-                margin-top: 0px;
-                height: 60px;
-                background-color: transparent;
-                justify-content: flex-end;
-                gap: 35px;
+                @include m.desktop {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 0px;
+                    height: 60px;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    gap: 35px;
                 }
 
             }
