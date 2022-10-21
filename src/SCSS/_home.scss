@@ -152,10 +152,10 @@ body {
 
             .arrowdown {
                 @include m.arrowdown;
-                margin-top: 250px;
+                margin-top: 200px;
 
                 @include m.desktop {
-                    margin-top: 350px;
+                    margin-top: 300px;
                 }
                 
            }
