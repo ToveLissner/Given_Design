@@ -1,8 +1,8 @@
 @use "mixins" as m;
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 body {
     display: flex;
@@ -65,6 +65,7 @@ body {
                 }
             
             }
+
             &__hamburger__line {
                 @include m.span; 
             }
@@ -94,7 +95,7 @@ body {
 
               li:nth-child(3){
                 @include m.desktop {
-                        margin-right: 30px;
+                  margin-right: 30px;
                 }
               }
 
@@ -146,7 +147,6 @@ body {
                     @include m.desktop {
                         font-size: x-large;
                     }
-
                 }
             }
 
